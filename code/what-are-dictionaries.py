@@ -1,0 +1,3 @@
+\capitals = {}
+
+print(capitals['Canada'])
