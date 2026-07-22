@@ -1,0 +1,13 @@
+# Secrets / environment variables (never commit API keys!)
+.env
+
+# Virtual environments
+venv/
+.venv/
+
+# Python cache files
+__pycache__/
+*.pyc
+
+# macOS system files
+.DS_Store

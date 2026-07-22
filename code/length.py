@@ -1,3 +1,0 @@
-watches = {}
-
-print(len(watches))
