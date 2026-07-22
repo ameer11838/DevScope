@@ -1,3 +1,0 @@
-\capitals = {}
-
-print(capitals['Canada'])
