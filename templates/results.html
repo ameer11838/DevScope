@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DevScope Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>{{ profile.name }} (@{{ profile.username }})</h1>
+        <p>{{ profile.bio }}</p>
+        <p>Public repos: {{ profile.public_repos }} | Followers: {{ profile.followers }}</p>
+
+        <h2>Fit Score for {{ target_field }}: {{ suggestions.fit_score }}/10</h2>
+
+        <h3>Strengths</h3>
+        <ul>
+            {% for s in suggestions.strengths %}
+            <li>{{ s }}</li>
+            {% endfor %}
+        </ul>
+
+        <h3>Gaps</h3>
+        <ul>
+            {% for g in suggestions.gaps %}
+            <li>{{ g }}</li>
+            {% endfor %}
+        </ul>
+
+        <h3>Suggested Actions</h3>
+        <ul>
+            {% for a in suggestions.suggested_actions %}
+            <li>{{ a }}</li>
+            {% endfor %}
+        </ul>
+
+        <a href="/">Analyze another profile</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DevScope</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Github Profile Anaylzer</h1>
+        <p>Analyze your GitHub profile and get suggestions to stand out in your target field.</p>
+
+        <form action="/analyze" method="POST">
+            <input type="text" name="username" placeholder="GitHub username" required>
+            <select name="target_field" required>
+                <option value="">Select a field</option>
+                <option value="Fintech">Fintech</option>
+                <option value="Web Development">Web Development</option>
+                <option value="Data Science">Data Science</option>
+                <option value="Cybersecurity">Cybersecurity</option>
+            </select>
+            <button type="submit">Analyze</button>
+        </form>
+    </div>
+</body>
+</html>
